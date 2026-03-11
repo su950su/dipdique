@@ -1,0 +1,716 @@
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul, ol, li, address {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  background: none;
+  border: none;
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-bold {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #F9F9F9;
+  top: 0px;
+  left: 0;
+  z-index: 10;
+  right: 0;
+}
+
+.logo {
+  width: 108px;
+  height: 50px;
+  background: url(../resource/header/logo.svg) no-repeat;
+  text-indent: -999px;
+}
+
+.menu-icon {
+  width: 45px;
+  height: 50px;
+  background: url(../resource/header/menu_icon.png) no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+nav {
+  display: none;
+}
+
+.menu-open {
+  margin: 0;
+  padding: 0;
+}
+.menu-open a {
+  display: block;
+}
+
+.fixed_item {
+  position: fixed;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  z-index: 100;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .fixed_item {
+    width: 180px;
+  }
+}
+.fixed_item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fixed_item img.main_item_0 {
+  opacity: 1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  background-color: #F9F9F9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  section {
+    height: 80vh;
+  }
+}
+section .main-text img {
+  display: block;
+  width: 672px;
+}
+@media (max-width: 768px) {
+  section .main-text {
+    max-width: 70%;
+    gap: 50px;
+  }
+}
+section .main-text:nth-child(2) {
+  margin-top: 260px;
+}
+
+.section01 .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .section01 .text {
+    margin-top: 50px;
+  }
+}
+.section01 .text dt, .section01 .text dd {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.section01 .text dt {
+  font-size: 1.2rem;
+  color: #0D0D0D;
+  font-family: "Instrument Serif";
+}
+.section01 .text dd {
+  font-size: 0.9rem;
+  color: #888888;
+}
+
+.main-text {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 210px;
+}
+.main-text img:nth-child(1) {
+  margin-top: 50px;
+}
+.main-text img:nth-child(2) {
+  z-index: 101;
+}
+
+.section02 {
+  background-color: #fff;
+}
+.section02 h3 {
+  width: 1000px;
+  height: 160px;
+  background: url(../resource/product/1/FLEUR_DE_PEAU.png) no-repeat;
+  text-indent: -999px;
+  z-index: 102;
+  transform: translateY(215%);
+}
+@media (max-width: 768px) {
+  .section02 h3 {
+    width: 80vw;
+    transform: translateY(140%);
+    background-size: contain;
+  }
+}
+.section02 .scent-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.section02 .scent-detail .bg-img {
+  position: absolute;
+  opacity: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section02 .scent-detail .bg-img:nth-child(1) {
+  top: 16%;
+  left: 36%;
+  width: 250px;
+  z-index: 2;
+}
+.section02 .scent-detail .bg-img:nth-child(2) {
+  top: 37%;
+  left: 29%;
+  width: 180px;
+}
+.section02 .scent-detail .bg-img:nth-child(3) {
+  top: 42%;
+  right: 31%;
+  width: 220px;
+}
+.section02 .scent-detail .bg-img:nth-child(4) {
+  bottom: 26.5%;
+  left: 56%;
+  width: 160px;
+}
+.section02 .scent-detail .bg-img:nth-child(5) {
+  bottom: 29.5%;
+  right: 29.2%;
+  width: 110px;
+}
+@media (max-width: 768px) {
+  .section02 .scent-detail .bg-img:nth-child(1) {
+    width: 30vw;
+    left: 20vw;
+  }
+  .section02 .scent-detail .bg-img:nth-child(3) {
+    width: 20vw;
+    right: 20vw;
+  }
+  .section02 .scent-detail .bg-img:nth-child(2), .section02 .scent-detail .bg-img:nth-child(4), .section02 .scent-detail .bg-img:nth-child(5) {
+    display: none;
+  }
+}
+
+.section03 {
+  background-color: #F9F9F9;
+}
+.section03 h3 {
+  width: 1000px;
+  height: 160px;
+  background: url(../resource/product/2/DOSON.png) no-repeat;
+  text-indent: -999px;
+  z-index: 102;
+  transform: translateY(215%);
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .section03 h3 {
+    width: 40vw;
+    transform: translateY(140%);
+    background-size: contain;
+  }
+}
+.section03 .scent-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.section03 .scent-detail .bg-img {
+  position: absolute;
+  opacity: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section03 .scent-detail .bg-img:nth-child(1) {
+  top: 20%;
+  left: 51%;
+  width: 250px;
+  z-index: 2;
+}
+.section03 .scent-detail .bg-img:nth-child(2) {
+  top: 35%;
+  left: 59%;
+  width: 180px;
+}
+.section03 .scent-detail .bg-img:nth-child(3) {
+  top: 45%;
+  left: 28%;
+  width: 220px;
+}
+.section03 .scent-detail .bg-img:nth-child(4) {
+  bottom: 23%;
+  left: 33%;
+  width: 180px;
+}
+.section03 .scent-detail .bg-img:nth-child(5) {
+  bottom: 24.5%;
+  left: 27%;
+  width: 120px;
+}
+@media (max-width: 768px) {
+  .section03 .scent-detail .bg-img:nth-child(1) {
+    width: 22vw;
+    right: 20vw;
+  }
+  .section03 .scent-detail .bg-img:nth-child(2) {
+    width: 22vw;
+    right: 20vw;
+  }
+  .section03 .scent-detail .bg-img:nth-child(3) {
+    width: 18vw;
+    top: 60%;
+    left: 20vw;
+  }
+  .section03 .scent-detail .bg-img:nth-child(4), .section03 .scent-detail .bg-img:nth-child(5) {
+    display: none;
+  }
+}
+
+.section04 {
+  background-color: #fff;
+}
+.section04 h3 {
+  width: 1000px;
+  height: 160px;
+  background: url(../resource/product/3/ORPHEON.png) no-repeat;
+  text-indent: -999px;
+  z-index: 102;
+  transform: translateY(195%);
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .section04 h3 {
+    width: 50vw;
+    transform: translateY(140%);
+    background-size: contain;
+  }
+}
+.section04 .scent-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.section04 .scent-detail .bg-img {
+  position: absolute;
+  opacity: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section04 .scent-detail .bg-img:nth-child(1) {
+  top: 20%;
+  left: 38%;
+  width: 180px;
+}
+.section04 .scent-detail .bg-img:nth-child(2) {
+  top: 29%;
+  left: 32%;
+  width: 170px;
+  z-index: 2;
+}
+.section04 .scent-detail .bg-img:nth-child(3) {
+  top: 42%;
+  right: 34%;
+  width: 150px;
+}
+.section04 .scent-detail .bg-img:nth-child(4) {
+  bottom: 41%;
+  right: 28.2%;
+  width: 100px;
+  z-index: 2;
+}
+.section04 .scent-detail .bg-img:nth-child(5) {
+  bottom: 29%;
+  right: 30%;
+  width: 200px;
+}
+@media (max-width: 768px) {
+  .section04 .scent-detail .bg-img:nth-child(1) {
+    width: 30vw;
+    left: 20vw;
+  }
+  .section04 .scent-detail .bg-img:nth-child(3) {
+    width: 20vw;
+    right: 18vw;
+  }
+  .section04 .scent-detail .bg-img:nth-child(5) {
+    width: 20vw;
+    top: 65%;
+    right: 22vw;
+  }
+  .section04 .scent-detail .bg-img:nth-child(2), .section04 .scent-detail .bg-img:nth-child(4) {
+    display: none;
+  }
+}
+
+.section05 {
+  background-color: #F9F9F9;
+}
+.section05 h3 {
+  width: 1000px;
+  height: 160px;
+  background: url(../resource/product/4/EAUDESSENS.png) no-repeat;
+  text-indent: -999px;
+  z-index: 102;
+  transform: translateY(195%);
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .section05 h3 {
+    width: 80vw;
+    transform: translateY(120%);
+    background-size: contain;
+  }
+}
+.section05 .scent-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.section05 .scent-detail .bg-img {
+  position: absolute;
+  opacity: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section05 .scent-detail .bg-img:nth-child(1) {
+  top: 23%;
+  left: 39%;
+  width: 200px;
+}
+.section05 .scent-detail .bg-img:nth-child(2) {
+  top: 35%;
+  left: 32%;
+  width: 180px;
+  z-index: 2;
+}
+.section05 .scent-detail .bg-img:nth-child(3) {
+  bottom: 24%;
+  right: 29%;
+  width: 220px;
+  z-index: 2;
+}
+.section05 .scent-detail .bg-img:nth-child(4) {
+  bottom: 35%;
+  right: 29.5%;
+  width: 110px;
+}
+.section05 .scent-detail .bg-img:nth-child(5) {
+  bottom: 33%;
+  right: 36%;
+  width: 110px;
+}
+@media (max-width: 768px) {
+  .section05 .scent-detail .bg-img:nth-child(2) {
+    width: 30vw;
+    top: 16%;
+    left: 20vw;
+  }
+  .section05 .scent-detail .bg-img:nth-child(3) {
+    width: 20vw;
+    bottom: 19vh;
+    right: 19vw;
+  }
+  .section05 .scent-detail .bg-img:nth-child(4) {
+    width: 10vw;
+    bottom: 38%;
+    right: 20vw;
+  }
+  .section05 .scent-detail .bg-img:nth-child(5) {
+    width: 10vw;
+    bottom: 38%;
+    right: 30vw;
+  }
+  .section05 .scent-detail .bg-img:nth-child(1) {
+    display: none;
+  }
+}
+
+.section06 {
+  background-color: #fff;
+}
+.section06 h3 {
+  width: 1000px;
+  height: 160px;
+  background: url(../resource/product/5/LOMBRE_DANS_LEAU.png) no-repeat;
+  text-indent: -999px;
+  z-index: 102;
+  transform: translateY(200%);
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .section06 h3 {
+    width: 80vw;
+    transform: translateY(170%);
+    background-size: contain;
+  }
+}
+.section06 .scent-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.section06 .scent-detail .bg-img {
+  position: absolute;
+  opacity: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section06 .scent-detail .bg-img:nth-child(1) {
+  top: 22%;
+  left: 35%;
+  width: 200px;
+}
+.section06 .scent-detail .bg-img:nth-child(2) {
+  top: 37%;
+  left: 34%;
+  width: 170px;
+  z-index: 2;
+}
+.section06 .scent-detail .bg-img:nth-child(3) {
+  top: 30%;
+  left: 29.5%;
+  width: 110px;
+}
+.section06 .scent-detail .bg-img:nth-child(4) {
+  bottom: 25%;
+  right: 33%;
+  width: 180px;
+  z-index: 2;
+}
+.section06 .scent-detail .bg-img:nth-child(5) {
+  bottom: 37%;
+  right: 30.5%;
+  width: 120px;
+}
+@media (max-width: 768px) {
+  .section06 .scent-detail .bg-img:nth-child(1) {
+    width: 30vw;
+    left: 14vw;
+  }
+  .section06 .scent-detail .bg-img:nth-child(2) {
+    width: 20vw;
+    top: 40%;
+    left: 15vw;
+  }
+  .section06 .scent-detail .bg-img:nth-child(4) {
+    width: 25vw;
+    bottom: 20%;
+    right: 20vw;
+  }
+  .section06 .scent-detail .bg-img:nth-child(3), .section06 .scent-detail .bg-img:nth-child(5) {
+    display: none;
+  }
+}
+
+.section07 {
+  background: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .section07 {
+    flex-direction: column;
+  }
+}
+.section07 .group {
+  flex: 1;
+  position: relative;
+  width: 33.333%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .section07 .group {
+    width: 100%;
+  }
+}
+.section07 .pc_menu {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .section07 .pc_menu {
+    display: none;
+  }
+}
+.section07 .mo_menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section07 .mo_menu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.section07 .text2 {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section07 .text2 h3 {
+  font-family: "Bona Nova SC";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+  color: #FDFDFD;
+  margin-bottom: 15px;
+}
+.section07 .text2 a {
+  display: inline-block;
+  padding: 6px 50px;
+  font-size: 0.8rem;
+  font-family: "Noto Serif";
+  font-weight: 700;
+  color: #FDFDFD;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: #0D0D0D;
+  padding: 40px;
+  color: #F9F9F9;
+  font-family: "Noto Sans";
+}
+footer .privacy {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  margin-bottom: 15px;
+}
+footer .privacy p {
+  margin: 0;
+}
+footer .privacy p:first-child::after {
+  content: "|";
+  margin: 0 5px;
+}/*# sourceMappingURL=index.css.map */

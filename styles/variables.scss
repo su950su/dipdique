@@ -1,0 +1,15 @@
+$color-main-text: #0D0D0D;
+$color-gray-text: #888888;
+$color-white-text: #FDFDFD;
+$color-white-text2: #FEFEFE;
+$color-main-bg: #F9F9F9;
+
+$main-text-width: 672px;
+$sub-text-width: 989px;
+$breakpoint-mobile: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}

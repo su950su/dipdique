@@ -1,0 +1,80 @@
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul, ol, li, address {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  background: none;
+  border: none;
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-bold {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}/*# sourceMappingURL=reset.css.map */
